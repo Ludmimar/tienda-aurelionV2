@@ -2,11 +2,17 @@
 
 ## ✅ RESUMEN EJECUTIVO
 
-Has completado exitosamente el proyecto **Tienda Aurelion** con **TRES versiones diferentes** del sistema de gestión de inventario y documentación completa.
+Has completado exitosamente el proyecto **Tienda Aurelion** con **CUATRO implementaciones diferentes** del sistema de gestión de inventario:
+- 📱 **Aplicación Web** (Streamlit)
+- 💻 **Programa de Consola** (Python)
+- 📓 **Notebooks Interactivos** (Jupyter)
+- 📊 **Dashboard Profesional** (Power BI Desktop) ⭐⭐ NUEVO
+
+Además de análisis estadístico completo y documentación exhaustiva.
 
 ---
 
-## 📦 ARCHIVOS CREADOS: 23+ ARCHIVOS
+## 📦 ARCHIVOS CREADOS: 40+ ARCHIVOS
 
 ### 🗄️ DATOS (Base de Datos Normalizada)
 1. **productos.csv** - Base de datos con 80 productos
@@ -14,34 +20,63 @@ Has completado exitosamente el proyecto **Tienda Aurelion** con **TRES versiones
 3. **ventas.csv** - Base de datos con 100 ventas
 4. **detalle_ventas.csv** - Detalles de 273 transacciones
 
-### 💻 PROGRAMAS (5 VERSIONES)
+### 💻 PROGRAMAS (6 VERSIONES)
 5. **tienda_aurelion.py** - Programa de consola interactivo mejorado (Python puro)
-6. **app_streamlit.py** ⭐ - Aplicación web profesional mejorada (Streamlit)
+6. **app_streamlit.py** ⭐ - Aplicación web profesional mejorada (Streamlit) + Página Power BI
 7. **tienda_aurelion.ipynb** - Notebook interactivo (Jupyter)
 8. **analisis_estadistico.py** ⭐ - Script de análisis estadístico completo
 9. **analisis_estadistico.ipynb** ⭐⭐ - Notebook de análisis estadístico completo
+10. **validar_datos_powerbi.py** ⭐ - Script validador para datos de Power BI
 
-### 📚 DOCUMENTACIÓN
-9. **README.md** - Documentación completa del proyecto
-10. **ANALISIS_ESTADISTICO.md** ⭐ - Análisis estadístico completo con gráficos
-11. **PSEUDOCODIGO_Y_DIAGRAMAS.md** - Algoritmos y 6 diagramas de flujo
-12. **SUGERENCIAS_COPILOT.md** - 10 aceptadas + 10 descartadas con análisis
-13. **GUIA_POWER_BI.md** - Guía completa para crear dashboard
-14. **GUIA_PRESENTACION.md** - Estructura de 11 slides con guión
-15. **INSTRUCCIONES_STREAMLIT.md** - Guía de uso de la app web
+### 📚 DOCUMENTACIÓN PRINCIPAL
+11. **README.md** - Documentación completa del proyecto (con sección Power BI)
+12. **ANALISIS_ESTADISTICO.md** ⭐ - Análisis estadístico completo con gráficos
+13. **PSEUDOCODIGO_Y_DIAGRAMAS.md** - Algoritmos y 6 diagramas de flujo
+14. **SUGERENCIAS_COPILOT.md** - 10 aceptadas + 10 descartadas con análisis
+15. **GUIA_POWER_BI.md** - Guía completa para crear dashboard
+16. **GUIA_PRESENTACION.md** - Estructura de 11 slides con guión
+17. **INSTRUCCIONES_STREAMLIT.md** - Guía de uso de la app web
 
 ### 📋 NAVEGACIÓN
-16. **INDICE_PROYECTO.md** - Índice general completo
-17. **INICIO_RAPIDO.md** - Guía de inicio rápido
-18. **RESUMEN_FINAL.md** - Este archivo
+18. **INDICE_PROYECTO.md** - Índice general completo
+19. **INICIO_RAPIDO.md** - Guía de inicio rápido
+20. **INSTRUCCIONES.md** - Instrucciones detalladas de uso
+21. **RESUMEN_FINAL.md** - Este archivo
+
+### 📊 DASHBOARD POWER BI ⭐⭐ NUEVO
+22. **Tienda_Aurelion_Dashboard_Sprint2.pbix** - Dashboard Power BI listo para usar
+23. **Tienda_Aurelion_Dashboard_Sprint2.pbit** - Plantilla Power BI
+24. **COMO_CREAR_DASHBOARD_POWERBI.md** - Guía maestra con índice completo
+25. **GUIA_RAPIDA_DASHBOARD_POWERBI.md** - Paso a paso (30 minutos)
+26. **CHECKLIST_DASHBOARD.md** - Lista de verificación completa
+27. **LAYOUT_VISUAL_DASHBOARD.md** - Vista previa visual del dashboard
+28. **RESUMEN_DASHBOARD_POWERBI.md** - Resumen ejecutivo Power BI
+
+### 📁 RECURSOS POWER BI (Power BI/)
+29. **query_productos.m** - Query M para tabla Productos
+30. **query_clientes.m** - Query M para tabla Clientes
+31. **query_ventas.m** - Query M para tabla Ventas
+32. **query_detalle_ventas.m** - Query M para tabla Detalle_Ventas
+33. **query_productos_RUTA_ABSOLUTA.m** - Query M con rutas absolutas (corregida)
+34. **query_clientes_RUTA_ABSOLUTA.m** - Query M con rutas absolutas
+35. **query_ventas_RUTA_ABSOLUTA.m** - Query M con rutas absolutas
+36. **query_detalle_ventas_RUTA_ABSOLUTA.m** - Query M con rutas absolutas
+37. **measures.dax** - Medidas DAX originales
+38. **measures_SIN_COLUMNAS_CALCULADAS.dax** - Medidas DAX simplificadas
+39. **measures_SIMPLIFICADAS.dax** - Medidas DAX con diagnóstico
+40. **theme.json** - Tema visual medieval (corregido)
+41. **layout_instructions.md** - Instrucciones detalladas de layout
+42. **Power BI/README.md** - Documentación de recursos Power BI
 
 ### 📊 GRÁFICOS
-19. **graficos/grafico1_distribucion_precios.png** - Distribución de precios
-20. **graficos/grafico2_matriz_correlacion.png** - Matriz de correlación
-21. **graficos/grafico3_outliers_ventas.png** - Análisis de outliers y ventas
+43. **graficos/grafico1_distribucion_precios.png** - Distribución de precios
+44. **graficos/grafico2_matriz_correlacion.png** - Matriz de correlación
+45. **graficos/grafico3_outliers_ventas.png** - Análisis de outliers y ventas
 
 ### ⚙️ CONFIGURACIÓN
-22. **requirements.txt** - Dependencias (streamlit, pandas, numpy, matplotlib, seaborn, scipy)
+46. **requirements.txt** - Dependencias (streamlit, pandas, numpy, matplotlib, seaborn, scipy)
+
+**TOTAL: ~46 archivos** (incluyendo todos los recursos de Power BI)
 
 ---
 

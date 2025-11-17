@@ -1,5 +1,9 @@
 let
-    Source = Csv.Document(File.Contents("datos/productos.csv"), [Delimiter=",", Columns=7, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+    // IMPORTANTE: Cambia esta ruta por la ruta completa en tu computadora
+    // Ejemplo Windows: "D:/IBM/IBM-Inteligencia-Artificial/Sprint-2/datos/productos.csv"
+    // Usa "/" (forward slash) en lugar de "\" (backslash)
+    
+    Source = Csv.Document(File.Contents("D:/IBM/IBM-Inteligencia-Artificial/Sprint-2/datos/productos.csv"), [Delimiter=",", Columns=7, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
     PromotedHeaders = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
     ChangedTypes = Table.TransformColumnTypes(PromotedHeaders, {
         {"id", Int64.Type},
@@ -20,4 +24,6 @@ let
     Ordenado = Table.Sort(AgregarRangoPrecio, {{"id", Order.Ascending}})
 in
     Ordenado
+
+
 

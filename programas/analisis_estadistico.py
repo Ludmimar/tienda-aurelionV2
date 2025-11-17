@@ -385,3 +385,9 @@ print("\n" + "=" * 80)
 print("ANÁLISIS COMPLETADO EXITOSAMENTE")
 print("=" * 80)
 
+print("\n💡 VISUALIZACIÓN INTERACTIVA:")
+print("   Los datos de este análisis también están disponibles en:")
+print("   • Dashboard Power BI Desktop (ver Sprint-2/documentacion/GUIA_RAPIDA_DASHBOARD_POWERBI.md)")
+print("   • Aplicación Streamlit (ejecuta: streamlit run programas/app_streamlit.py)")
+print("\n" + "=" * 80)
+

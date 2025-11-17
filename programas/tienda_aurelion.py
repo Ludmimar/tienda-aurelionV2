@@ -81,6 +81,9 @@ def mostrar_banner():
     print("\n" + "═" * 70)
     print("              ⚔️  TIENDA AURELION - SISTEMA DE GESTIÓN ⚔️")
     print("           Sistema de Inventario y Ventas - Sprint 2")
+    print("═" * 70)
+    print("    💡 Tip: Visualiza estos datos en Power BI Dashboard")
+    print("       (ver GUIA_RAPIDA_DASHBOARD_POWERBI.md)")
     print("═" * 70 + "\n")
 
 
@@ -951,6 +954,10 @@ def main():
             print("╔" + "═" * 68 + "╗")
             print("║" + " " * 15 + "¡Gracias por usar Tienda Aurelion!" + " " * 18 + "║")
             print("║" + " " * 20 + "¡Que tengas un gran día! ⚔️" + " " * 21 + "║")
+            print("╠" + "═" * 68 + "╣")
+            print("║  💡 Recuerda: También puedes visualizar estos datos en:       ║")
+            print("║     • Dashboard Power BI (ver documentacion/)                  ║")
+            print("║     • Aplicación Streamlit (ejecuta app_streamlit.py)        ║")
             print("╚" + "═" * 68 + "╝\n")
             break
         elif opcion == 1:

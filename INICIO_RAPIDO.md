@@ -82,6 +82,52 @@ jupyter notebook programas/analisis_estadistico.ipynb
 
 ---
 
+### 6️⃣ Dashboard Power BI ⭐⭐ NUEVO
+
+#### Opción A: Usar Dashboard Ya Creado (Instantáneo)
+
+```bash
+# El archivo está listo en:
+Sprint-2/Tienda_Aurelion_Dashboard_Sprint2.pbix
+```
+
+**Pasos para abrirlo:**
+1. Descarga [Power BI Desktop](https://powerbi.microsoft.com/desktop/) (Gratis)
+2. Doble click en el archivo `.pbix`
+3. ¡Listo! El dashboard se abrirá con todos los datos
+
+**También desde Streamlit:**
+```bash
+streamlit run programas/app_streamlit.py
+# Ve a la página "📊 Dashboard Power BI" y descárgalo
+```
+
+#### Opción B: Crear Dashboard Desde Cero (30 minutos)
+
+```bash
+# 1. (Opcional) Valida los datos
+python programas/validar_datos_powerbi.py
+
+# 2. Abre la guía
+# Archivo: documentacion/GUIA_RAPIDA_DASHBOARD_POWERBI.md
+
+# 3. Todos los recursos listos en: Power BI/
+```
+
+**El dashboard incluye:**
+- 📄 **Página 1 - Overview**: 5 KPIs, gráficos de productos, alertas de stock
+- 📄 **Página 2 - Ventas y Clientes**: Evolución temporal, top productos vendidos
+- 🎨 **Diseño medieval**: Colores dorados, rojo oscuro, azul marino
+- 🔗 **Interactividad completa**: Cross-filtering automático
+
+**Guías disponibles:**
+- 🎯 `documentacion/COMO_CREAR_DASHBOARD_POWERBI.md` - Guía maestra
+- 🚀 `documentacion/GUIA_RAPIDA_DASHBOARD_POWERBI.md` - Paso a paso (30 min)
+- ✅ `documentacion/CHECKLIST_DASHBOARD.md` - Lista de verificación
+- 🎨 `documentacion/LAYOUT_VISUAL_DASHBOARD.md` - Vista previa visual
+
+---
+
 ## 📁 Archivos del Proyecto
 
 **📁 Estructura Organizada:**
@@ -97,14 +143,18 @@ Entregable/
 
 | Carpeta/Archivo | Descripción |
 |-----------------|-------------|
-| **📁 datos/** | Base de datos CSV |
-| **📁 programas/** | 5 versiones del sistema (consola, web, notebook, análisis Python, análisis Jupyter) |
+| **📁 datos/** | Base de datos CSV (4 archivos normalizados) |
+| **📁 programas/** | 6 versiones del sistema (consola, web, notebooks, análisis, validador) |
 | **📁 documentacion/** | Todas las guías y documentación técnica |
+| **📁 Power BI/** | Queries M, medidas DAX, tema JSON, recursos dashboard ⭐ |
+| **📁 graficos/** | Gráficos estadísticos generados automáticamente |
 | **📄 README.md** | Documentación completa del proyecto ⭐ |
 | **📄 INSTRUCCIONES.md** | Guía detallada de uso |
 | **📄 INICIO_RAPIDO.md** | Este archivo - Guía rápida |
 | **📄 RESUMEN_FINAL.md** | Resumen ejecutivo |
 | **📄 requirements.txt** | Dependencias para instalar |
+| **📄 Tienda_Aurelion_Dashboard_Sprint2.pbix** | Dashboard Power BI listo ⭐⭐ |
+| **📄 documentacion/GUIA_RAPIDA_DASHBOARD_POWERBI.md** | Paso a paso para crear dashboard (30 min) ⭐ |
 
 ---
 

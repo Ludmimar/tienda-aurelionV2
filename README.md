@@ -2,7 +2,19 @@
 
 **Sprint 2 - Introducción a la Inteligencia Artificial - IBM**
 
-> 💡 **Proyecto completo con 3 versiones diferentes:** Consola Python, Aplicación Web Streamlit y Jupyter Notebook
+> 💡 **Proyecto completo con 5 versiones diferentes:** Aplicación Web Online, Consola Python, Aplicación Web Local, Jupyter Notebook y Análisis Estadístico
+
+---
+
+## 🌐 Acceso Directo a la Aplicación Web
+
+**¡Prueba la aplicación directamente en tu navegador sin instalaciones!**
+
+🔗 **[👉 Acceder a la Aplicación Web](https://tienda-aurelionv2.streamlit.app/)**
+
+> ✨ **Incluye:** Gestión de productos, clientes y ventas | Análisis estadístico completo | Gráficos interactivos | Dashboard profesional
+
+---
 
 ## 📋 Índice
 0. [⚡ Inicio Rápido](#inicio-rápido) ← **Empieza aquí**
@@ -20,24 +32,34 @@
 
 ## ⚡ Inicio Rápido
 
-> ⚠️ **IMPORTANTE**: Ejecuta estos comandos desde la carpeta raíz `Entregable/`
+### 🌐 Opción 1: Aplicación Web Online ⭐⭐ RECOMENDADO (Sin instalaciones)
 
-### 🖥️ Opción 1: Programa de Consola (Sin instalaciones)
+**¡Prueba la aplicación directamente en tu navegador!**
+
+🔗 **[Acceder a la Aplicación Web](https://tienda-aurelionv2.streamlit.app/)**
+
+> ✨ **Ventajas:** No requiere instalación, funciona inmediatamente, siempre actualizada
+
+---
+
+### 🖥️ Opción 2: Programa de Consola (Sin instalaciones)
 ```bash
 python programas/tienda_aurelion.py
 ```
 
-### 🌐 Opción 2: Aplicación Web ⭐ RECOMENDADO
+### 🌐 Opción 3: Aplicación Web Local ⭐ RECOMENDADO
 ```bash
 # Instalar dependencias (solo primera vez)
-pip install streamlit pandas
+pip install streamlit pandas numpy matplotlib seaborn scipy
 
 # Ejecutar la aplicación web
 streamlit run programas/app_streamlit.py
 ```
 **Se abrirá automáticamente en tu navegador:** `http://localhost:8501`
 
-### 📓 Opción 3: Jupyter Notebook
+> ⚠️ **IMPORTANTE**: Ejecuta estos comandos desde la carpeta raíz del proyecto
+
+### 📓 Opción 4: Jupyter Notebook
 ```bash
 # Instalar Jupyter (solo primera vez)
 pip install jupyter
@@ -75,10 +97,12 @@ Desarrollo de un **Sistema Interactivo de Gestión de Inventario** implementado 
 
 #### 🌐 **Versión 2: Aplicación Web Streamlit** (`app_streamlit.py`) ⭐
 - Interfaz web profesional en el navegador
+- **Disponible online:** [https://tienda-aurelionv2.streamlit.app/](https://tienda-aurelionv2.streamlit.app/) ⭐⭐
 - Gráficos interactivos en tiempo real
 - Filtros dinámicos (sliders, dropdowns)
 - Dashboard visual completo
 - Gestión de inventario desde la interfaz
+- Análisis estadístico completo integrado con descripciones detalladas
 
 #### 📓 **Versión 3: Jupyter Notebook** (`tienda_aurelion.ipynb`)
 - Documentación interactiva con código ejecutable
@@ -511,11 +535,26 @@ python programas/tienda_aurelion.py
 
 ---
 
-### Opción 2: Aplicación Web Streamlit ⭐ RECOMENDADO
+### Opción 2: Aplicación Web Online ⭐⭐ RECOMENDADO (Sin instalaciones)
+
+**Acceso directo:**
+🔗 **[Acceder a la Aplicación Web Online](https://tienda-aurelionv2.streamlit.app/)**
+
+**Ventajas:**
+- ✅ Sin instalación requerida
+- ✅ Funciona inmediatamente en cualquier navegador
+- ✅ Siempre actualizada con la última versión
+- ✅ Interfaz web profesional y moderna
+- ✅ Gráficos interactivos en tiempo real
+- ✅ Análisis estadístico completo integrado
+
+---
+
+### Opción 3: Aplicación Web Streamlit Local ⭐ RECOMENDADO
 
 **Requisitos:**
 - Python 3.6 o superior
-- Streamlit y Pandas
+- Streamlit y dependencias
 
 **Instalación (solo primera vez):**
 ```bash
@@ -532,6 +571,7 @@ La aplicación se abrirá automáticamente en tu navegador en `http://localhost:
 **Ventajas:**
 - ✅ Interfaz web profesional y moderna
 - ✅ Gráficos interactivos en tiempo real
+- ✅ Control total del código y datos
 - ✅ Filtros dinámicos (sliders, dropdowns)
 - ✅ Dashboard visual completo
 - ✅ No requiere conocimientos técnicos para usar
@@ -545,7 +585,7 @@ La aplicación se abrirá automáticamente en tu navegador en `http://localhost:
 
 ---
 
-### Opción 3: Jupyter Notebook
+### Opción 4: Jupyter Notebook
 
 **Requisitos:**
 - Python 3.6 o superior
@@ -638,7 +678,11 @@ Para más información, consulta:
 **Autor**: Martos Ludmila  
 **DNI**: 34811650  
 **Fecha**: 2025  
-**Versión**: 2.0
+**Versión**: 2.1
+
+### 🌐 Enlaces del Proyecto
+
+- 🔗 **[Aplicación Web Online](https://tienda-aurelionv2.streamlit.app/)** ⭐⭐ - Acceso directo sin instalaciones
 
 ---
 
@@ -694,6 +738,26 @@ Este proyecto demuestra conceptos fundamentales de:
 | `GUIA_PRESENTACION.md` | Estructura para presentación oral |
 | `INSTRUCCIONES_STREAMLIT.md` | Guía de uso de la app web |
 
+**📁 Power BI/:**
+| Archivo | Descripción |
+|---------|-------------|
+| `query_productos.m` | Query Power Query para tabla Productos |
+| `query_clientes.m` | Query Power Query para tabla Clientes |
+| `query_ventas.m` | Query Power Query para tabla Ventas |
+| `query_detalle_ventas.m` | Query Power Query para tabla Detalle_Ventas |
+| `measures.dax` | Medidas DAX para KPIs y análisis |
+| `theme.json` | Tema visual medieval para dashboard |
+| `layout_instructions.md` | Instrucciones detalladas de layout |
+| `README.md` | Guía del paquete Power BI |
+
+**📄 Guías Dashboard Power BI:**
+| Archivo | Descripción |
+|---------|-------------|
+| `COMO_CREAR_DASHBOARD_POWERBI.md` | 🎯 Guía maestra con índice completo ⭐⭐ |
+| `GUIA_RAPIDA_DASHBOARD_POWERBI.md` | 🚀 Instrucciones paso a paso (20-30 min) ⭐ |
+| `CHECKLIST_DASHBOARD.md` | ✅ Lista de verificación completa |
+| `LAYOUT_VISUAL_DASHBOARD.md` | 🎨 Vista previa visual del dashboard |
+
 El código está completamente documentado y diseñado para ser educativo y fácil de entender.
 
 ### Comparación de Versiones
@@ -709,3 +773,122 @@ El código está completamente documentado y diseñado para ser educativo y fác
 
 **Recomendación:** Usa **Streamlit** para presentaciones impactantes, **Jupyter** para documentación educativa, y **Consola** para uso rápido sin instalaciones.
 
+---
+
+## 📊 Dashboard Power BI
+
+### 🎯 Crear Dashboard en Power BI Desktop
+
+El proyecto incluye **todos los recursos necesarios** para crear un dashboard profesional en Power BI Desktop en **20-30 minutos**.
+
+#### 🚀 Inicio Rápido
+
+**➡️ Comienza aquí: [`COMO_CREAR_DASHBOARD_POWERBI.md`](./documentacion/COMO_CREAR_DASHBOARD_POWERBI.md)**
+
+Esta guía maestra te dirigirá a todos los recursos que necesitas.
+
+#### 📚 Recursos Disponibles
+
+| Recurso | Descripción | Tiempo |
+|---------|-------------|--------|
+| 🎯 **[Guía Maestra](./documentacion/COMO_CREAR_DASHBOARD_POWERBI.md)** | Índice completo con flujo de trabajo recomendado | 5 min lectura |
+| 🚀 **[Guía Paso a Paso](./documentacion/GUIA_RAPIDA_DASHBOARD_POWERBI.md)** | Instrucciones detalladas para crear el dashboard | 30 min |
+| ✅ **[Checklist](./documentacion/CHECKLIST_DASHBOARD.md)** | Lista de verificación completa | - |
+| 🎨 **[Layout Visual](./documentacion/LAYOUT_VISUAL_DASHBOARD.md)** | Vista previa de cómo debe verse el dashboard | 3 min |
+| 🔍 **[Validador de Datos](./programas/validar_datos_powerbi.py)** | Script Python para verificar datos | 1 min |
+
+#### 📦 Archivos Power BI Incluidos
+
+Todos los archivos están listos en la carpeta `Power BI/`:
+
+- ✅ **4 Queries M** (para cargar tablas desde CSV)
+- ✅ **Medidas DAX** (15+ KPIs y métricas)
+- ✅ **Tema JSON** (colores medievales profesionales)
+- ✅ **Instrucciones de Layout** (paso a paso visual)
+
+#### 🎯 Dashboard Final
+
+El dashboard incluirá **2 páginas principales**:
+
+**Página 1: Overview (General)**
+- 5 tarjetas KPI (productos, inventario, stock, ventas, ingresos)
+- Gráfico de barras: Productos por categoría
+- Gráfico de columnas: Top 10 productos más valiosos
+- Gráfico de anillos: Distribución de stock
+- Tabla: Productos con stock bajo (con alertas)
+
+**Página 2: Ventas y Clientes**
+- 4 tarjetas KPI (ticket promedio, productos vendidos, clientes, promedio venta)
+- Gráfico de línea: Evolución de ventas por fecha
+- Gráfico de barras: Top 5 productos más vendidos
+- Gráfico de columnas: Clientes por ciudad
+- Tabla: Detalle completo de ventas
+- Slicer: Filtro de fechas
+
+#### 🎨 Diseño Visual
+
+- **Tema:** Medieval/Fantasía con colores dorados y rojo oscuro
+- **Interactividad:** Cross-filtering entre todos los visuales
+- **Responsivo:** Adaptable a diferentes tamaños de pantalla
+
+#### ⚡ Flujo de Trabajo Rápido
+
+```bash
+# 1. Validar datos (opcional, 1 min)
+cd Sprint-2/programas
+python validar_datos_powerbi.py
+
+# 2. Abrir Power BI Desktop
+
+# 3. Seguir GUIA_RAPIDA_DASHBOARD_POWERBI.md (30 min)
+#    - Cargar 4 tablas con queries M (5 min)
+#    - Crear relaciones (2 min)
+#    - Importar tema (1 min)
+#    - Crear medidas DAX (3 min)
+#    - Página Overview (8 min)
+#    - Página Ventas y Clientes (7 min)
+#    - Formateo final (3 min)
+#    - Guardar .pbix (1 min)
+
+# 4. Resultado: Dashboard profesional completo ✅
+```
+
+#### 📊 KPIs Esperados
+
+Al finalizar, tu dashboard mostrará aproximadamente:
+
+- **Total Productos:** 80
+- **Valor Total Inventario:** ~$285,000
+- **Stock Total:** ~4,068 unidades
+- **Total Ventas:** 100
+- **Ingresos Totales:** ~$219,000
+- **Ticket Promedio:** ~$2,190
+- **Total Clientes:** 50
+- **Productos Stock Bajo:** ~15
+
+#### 🆘 Solución de Problemas
+
+Todas las guías incluyen secciones de solución de problemas comunes:
+
+- ❌ No se encuentran los archivos CSV → Solución en guía
+- ❌ Las medidas DAX dan error → Verificación de nombres
+- ❌ Las relaciones no funcionan → Pasos de corrección
+- ❌ El tema no se aplica → Alternativas y soluciones
+
+#### 📥 Descargar Power BI Desktop
+
+Si aún no tienes Power BI Desktop:
+
+🔗 **[Descargar Power BI Desktop](https://powerbi.microsoft.com/desktop/)** (Gratis)
+
+---
+
+## 👨‍💻 Autor
+
+**Desarrollador**: Ludmila Martos
+
+## 📞 Contacto
+
+- **Email**: [ludmilamartos@gmail.com](mailto:ludmilamartos@gmail.com)
+- **LinkedIn**: [ludmimar89](https://www.linkedin.com/in/ludmimar89/)
+- **GitHub**: [Ludmimar](https://github.com/Ludmimar)

@@ -6,54 +6,18 @@
     "#000080",
     "#C0C0C0",
     "#FFD700",
-    "#FF0000",
-    "#2C2C2C"
+    "#FF6347",
+    "#4169E1",
+    "#32CD32"
   ],
-  "background": "#2C2C2C",
-  "foreground": "#F5F5DC",
+  "background": "#FFFFFF",
+  "foreground": "#000000",
   "tableAccent": "#D4AF37",
-  "visualStyles": {
-    "*": {
-      "*": [
-        {
-          "properties": {
-            "legend": [
-              {
-                "show": true
-              }
-            ]
-          }
-        }
-      ]
-    }
-  },
-  "textClasses": {
-    "title": {
-      "color": {
-        "solid": {
-          "color": "#D4AF37"
-        }
-      },
-      "fontSize": 24,
-      "fontFamily": "Cinzel, Segoe UI"
-    },
-    "header": {
-      "color": {
-        "solid": {
-          "color": "#F5F5DC"
-        }
-      },
-      "fontSize": 12,
-      "fontFamily": "Segoe UI"
-    },
-    "callout": {
-      "color": {
-        "solid": {
-          "color": "#FFFFFF"
-        }
-      },
-      "fontSize": 10,
-      "fontFamily": "Segoe UI"
-    }
-  }
+  "good": "#32CD32",
+  "neutral": "#FFD700",
+  "bad": "#FF6347",
+  "maximum": "#8B0000",
+  "center": "#C0C0C0",
+  "minimum": "#000080",
+  "null": "#666666"
 }

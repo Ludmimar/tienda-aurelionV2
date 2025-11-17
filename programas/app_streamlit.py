@@ -1387,6 +1387,214 @@ def pagina_analisis_estadistico(df_productos: pd.DataFrame, df_clientes: pd.Data
             st.markdown(f"- Total Ventas: {outliers_t['count']} outliers")
 
 
+def pagina_power_bi():
+    """Página con información y descarga del dashboard Power BI."""
+    st.markdown("<h1 style='text-align: center; color: #D4AF37;'>📊 Dashboard Power BI - Tienda Aurelion</h1>", unsafe_allow_html=True)
+    st.markdown("---")
+    
+    # Introducción
+    st.markdown("""
+    ### ⚔️ Dashboard Profesional en Power BI Desktop
+    
+    Además de esta aplicación web en Streamlit, el proyecto incluye un **dashboard profesional** 
+    creado en **Microsoft Power BI Desktop** con visualizaciones interactivas avanzadas.
+    """)
+    
+    # Columnas para layout
+    col1, col2 = st.columns([1, 1])
+    
+    with col1:
+        st.markdown("""
+        ### 🎯 Características del Dashboard
+        
+        #### 📄 Página 1: Overview (General)
+        - **5 tarjetas KPI**: Total productos, valor inventario, stock total, ventas, ingresos
+        - **Gráfico de barras**: Productos por categoría
+        - **Gráfico de columnas**: Top 10 productos más valiosos
+        - **Gráfico de anillos**: Distribución de stock
+        - **Tabla con alertas**: Productos con stock bajo (formato condicional)
+        
+        #### 📄 Página 2: Ventas y Clientes
+        - **4 tarjetas KPI**: Ticket promedio, productos vendidos, clientes, promedio venta
+        - **Gráfico de línea**: Evolución de ingresos por fecha
+        - **Gráfico de barras**: Top 5 productos más vendidos
+        - **Gráfico de columnas**: Clientes por ciudad
+        - **Tabla detallada**: Todas las ventas
+        - **Slicer de fechas**: Filtro temporal interactivo
+        
+        #### 🎨 Diseño Visual
+        - **Tema medieval**: Colores dorados, rojo oscuro, azul marino
+        - **Interactividad completa**: Cross-filtering entre visuales
+        - **15+ medidas DAX**: KPIs y métricas calculadas
+        - **Relaciones entre 4 tablas**: Productos, Clientes, Ventas, Detalle_Ventas
+        """)
+    
+    with col2:
+        st.markdown("""
+        ### 💾 Descargar Dashboard
+        
+        El dashboard está disponible en dos formatos:
+        """)
+        
+        # Verificar si existe el archivo .pbit
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        pbit_path = os.path.join(script_dir, "..", "Tienda_Aurelion_Dashboard_Sprint2.pbit")
+        pbix_path = os.path.join(script_dir, "..", "Tienda_Aurelion_Dashboard_Sprint2.pbix")
+        
+        # Verificar si existe el .pbit en la raíz del Sprint-2
+        if not os.path.exists(pbit_path):
+            pbit_path = os.path.join(script_dir, "..", "..", "Sprint-2", "Tienda_Aurelion_Dashboard_Sprint2.pbit")
+        
+        archivo_encontrado = os.path.exists(pbit_path) or os.path.exists(pbix_path)
+        
+        if archivo_encontrado:
+            st.success("✅ Archivo de dashboard disponible")
+            
+            # Botón de descarga
+            archivo_disponible = pbit_path if os.path.exists(pbit_path) else pbix_path
+            extension = ".pbit" if os.path.exists(pbit_path) else ".pbix"
+            
+            try:
+                with open(archivo_disponible, "rb") as file:
+                    btn = st.download_button(
+                        label=f"⬇️ Descargar Dashboard ({extension})",
+                        data=file,
+                        file_name=f"Tienda_Aurelion_Dashboard_Sprint2{extension}",
+                        mime="application/octet-stream"
+                    )
+                    
+                st.info(f"""
+                **📝 Tamaño del archivo**: {os.path.getsize(archivo_disponible) / 1024:.2f} KB
+                
+                **Formato**: {extension}
+                """)
+            except Exception as e:
+                st.warning(f"El archivo existe pero hubo un error al preparar la descarga: {e}")
+        else:
+            st.warning("""
+            ⚠️ **Archivo de dashboard no encontrado**
+            
+            El archivo `.pbit` o `.pbix` debe estar en la carpeta `Sprint-2/`
+            
+            **Para crear el dashboard:**
+            1. Abre Power BI Desktop
+            2. Sigue la guía: `GUIA_RAPIDA_DASHBOARD_POWERBI.md`
+            3. Guarda el archivo como `.pbix` o `.pbit` en la carpeta Sprint-2
+            """)
+        
+        st.markdown("""
+        ### 📥 Requisitos
+        
+        Para abrir el dashboard necesitas:
+        - **[Power BI Desktop](https://powerbi.microsoft.com/desktop/)** (Gratis)
+        - Windows 10/11 (recomendado)
+        - Los archivos CSV en `Sprint-2/datos/`
+        """)
+    
+    st.markdown("---")
+    
+    # Instrucciones de uso
+    st.markdown("""
+    ### 🚀 Cómo Usar el Dashboard
+    
+    #### Opción 1: Archivo .pbit (Plantilla)
+    1. Descarga el archivo `.pbit` desde arriba
+    2. Abre Power BI Desktop
+    3. Doble click en el archivo `.pbit`
+    4. Power BI te pedirá la ubicación de los archivos CSV
+    5. Navega hasta `Sprint-2/datos/` y selecciona la carpeta
+    6. ¡Listo! El dashboard se cargará con todos los datos
+    
+    #### Opción 2: Archivo .pbix (Completo)
+    1. Descarga el archivo `.pbix` desde arriba
+    2. Abre Power BI Desktop
+    3. Doble click en el archivo `.pbix`
+    4. El dashboard se abrirá directamente con los datos
+    
+    #### Opción 3: Crear desde Cero
+    Si quieres crear el dashboard tú mismo:
+    1. Abre la guía: `Sprint-2/GUIA_RAPIDA_DASHBOARD_POWERBI.md`
+    2. Sigue las instrucciones paso a paso (30 minutos)
+    3. Todos los recursos están en `Sprint-2/Power BI/`
+    """)
+    
+    # KPIs esperados
+    st.markdown("---")
+    st.markdown("""
+    ### 📊 KPIs del Dashboard
+    
+    Cuando abras el dashboard, deberías ver aproximadamente estos valores:
+    """)
+    
+    col1, col2, col3, col4, col5 = st.columns(5)
+    
+    with col1:
+        st.metric("Total Productos", "80")
+    with col2:
+        st.metric("Valor Inventario", "$285,000")
+    with col3:
+        st.metric("Stock Total", "4,068")
+    with col4:
+        st.metric("Total Ventas", "100")
+    with col5:
+        st.metric("Ingresos Totales", "$219,000")
+    
+    st.markdown("---")
+    
+    # Recursos adicionales
+    st.markdown("""
+    ### 📚 Recursos del Proyecto
+    
+    El proyecto incluye guías completas para crear el dashboard:
+    
+    | Recurso | Descripción |
+    |---------|-------------|
+    | 🎯 `COMO_CREAR_DASHBOARD_POWERBI.md` | Guía maestra con índice completo |
+    | 🚀 `GUIA_RAPIDA_DASHBOARD_POWERBI.md` | Instrucciones paso a paso (30 min) |
+    | ✅ `CHECKLIST_DASHBOARD.md` | Lista de verificación completa |
+    | 🎨 `LAYOUT_VISUAL_DASHBOARD.md` | Vista previa visual del dashboard |
+    | 📁 `Power BI/` | Queries M, medidas DAX, tema JSON |
+    
+    Todos los archivos están en la carpeta `Sprint-2/`
+    """)
+    
+    # Comparación Streamlit vs Power BI
+    st.markdown("---")
+    st.markdown("""
+    ### 🔄 Streamlit vs Power BI
+    
+    Ambas herramientas son excelentes para visualización de datos. Aquí una comparación:
+    
+    | Característica | Streamlit (Esta App) | Power BI Desktop |
+    |----------------|----------------------|------------------|
+    | **Plataforma** | Web (Python) | Desktop (Windows) |
+    | **Instalación** | Ligera (pip install) | Requiere descarga (~500 MB) |
+    | **Código** | Python (open source) | Interfaz gráfica |
+    | **Interactividad** | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
+    | **Gráficos** | Matplotlib, Plotly | Visuales nativos de BI |
+    | **Cross-filtering** | Manual | Automático |
+    | **Compartir** | Deploy web fácil | Power BI Service (requiere cuenta) |
+    | **Mejor para** | Análisis exploratorio, prototipos | Dashboards empresariales |
+    
+    **💡 Recomendación**: Usa ambas herramientas según la situación:
+    - **Streamlit**: Para análisis rápido, exploración de datos, demos online
+    - **Power BI**: Para reportes ejecutivos, presentaciones formales, análisis de negocio
+    """)
+    
+    # Footer
+    st.markdown("---")
+    st.info("""
+    **🎓 Sprint 2 - IBM - Introducción a la Inteligencia Artificial**
+    
+    Proyecto completo con múltiples implementaciones:
+    - ✅ Aplicación Web Streamlit (esta)
+    - ✅ Dashboard Power BI Desktop
+    - ✅ Jupyter Notebooks (análisis estadístico)
+    - ✅ Scripts Python (consola)
+    - ✅ Documentación completa
+    """)
+
+
 def main():
     """Función principal de la aplicación."""
     # Cargar datos
@@ -1403,7 +1611,7 @@ def main():
     st.sidebar.title("🎮 Navegación")
     pagina = st.sidebar.radio(
         "Selecciona una página:",
-        ["🏠 Inicio", "🔍 Explorar Productos", "📊 Estadísticas", "📈 Análisis Estadístico", "✏️ Gestionar Inventario", "💰 Ventas", "👥 Clientes"]
+        ["🏠 Inicio", "🔍 Explorar Productos", "📊 Estadísticas", "📈 Análisis Estadístico", "✏️ Gestionar Inventario", "💰 Ventas", "👥 Clientes", "📊 Dashboard Power BI"]
     )
     
     st.sidebar.markdown("---")
@@ -1432,6 +1640,8 @@ def main():
         pagina_ventas(df_ventas, df_detalle, df_productos, df_clientes)
     elif pagina == "👥 Clientes":
         pagina_clientes(df_clientes, df_ventas)
+    elif pagina == "📊 Dashboard Power BI":
+        pagina_power_bi()
     
     # Footer
     st.sidebar.markdown("---")
